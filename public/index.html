@@ -2,80 +2,53 @@
 <html>
   <head>
     <title>Kyle Warren</title>
-    <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-      }
-
-      body {
-        background: #f5f4f0;
-        font-family: "Helvetica Neue", Helvetica, sans-serif;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 1.5em;
-        color: black;
-      }
-      main {
-        position: relative;
-        padding: 20px;
-      }
-      content {
-        display: block;
-        position: relative;
-        z-index: 2;
-      }
-      rabbits {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 1024px;
-        height: 768px;
-        width: 500px;
-        height: 500px;
-        background: #f5f4f0 url(rabbits.jpg) no-repeat -400px 50px;
-        background-size: 1024px;
-        z-index: 1;
-      }
-
-      h1 {
-        margin: 0 0 10px;
-        font-size: 36px;
-        font-weight: 300;
-      }
-      h2 {
-        margin: 20px 0 10px;
-        font-size: 24px;
-        font-weight: 300;
-      }
-
-      subtitle {
-        display: block;
-      }
-      p {
-        margin: 0;
-      }
-
-      a {
-        color: blue;
-        text-decoration: none;
-      }
-      a:visited {
-        color: blue;
-      }
-
-      .k-ui-comment {
-        color: #666;
-      }
-
-    </style>
+    <link rel="stylesheet" language="text/css" href="style.css" />
   </head>
 
   <body>
     <main>
       <content>
+        <section class="hero">
+          <img class="colors" src="colors.svg />
+          <!--
+          <div class="blocks">
+            <div class="row light">
+              <div class="block rose"></div>
+              <div class="block gold"></div>
+              <div class="block opal"></div>
+              <div class="block orange"></div>
+              <div class="block red"></div>
+              <div class="block green"></div>
+              <div class="block blue"></div>
+              <div class="block purple"></div>
+            </div>
+            <div class="row dark">
+              <div class="block rose"></div>
+              <div class="block gold"></div>
+              <div class="block opal"></div>
+              <div class="block orange"></div>
+              <div class="block red"></div>
+              <div class="block green"></div>
+              <div class="block blue"></div>
+              <div class="block purple"></div>
+            </div>
+          </div>
+          -->
+
+          <div class="hero-text">
+          <h1>Kyle Warren</h1>
+          <p>i write and design software that often involves <strong>complex UI</strong>, <strong>rich graphics</strong>, and <strong>live networking</strong>.</p>
+          <p>my work history includes <strong>video games</strong>, <strong>social networks</strong>, <strong>analytics</strong>, and <strong>enterprise software</strong>. you can read more about it <a>here</a>.</p>
+          <p>sometimes i make <a>weird website things</a>.
+            i write things on <a>my blog</a>.
+            i compose and record <a>music</a>.
+            i <a>run</a> a lot.
+            i have a <a>bossy dog</a>.
+            i take <a>photos</a>.</p>
+          </div>
+        </section>
+
+        <!--
         <h1>Kyle Warren</h1>
         <subtitle>software guy in SF near the Panhandle</subtitle>
         <subtitle>into pizza, timbre, running, climbing, and reading</subtitle>
@@ -126,9 +99,8 @@
             Fleet Foxes - <a href="sheets/oliverJames.rtf">"Oliver James"</a>
           </indent>
         </p>
+        -->
       </content>
-
-      <rabbits></rabbits>
     </main>
   </body>
 </html>
