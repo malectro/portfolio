@@ -30,6 +30,7 @@
   --line-height-paragraph: 1.25;
 
   --gap-small: 60px;
+  --gap-tiny: 30px;
 }
 
 body, html {
@@ -74,7 +75,7 @@ p a:hover {
 h1, h2 {
   margin: 0;
   font-family: var(--font-family-title);
-  font-weight: medium;
+  font-weight: 70;
 }
 
 
@@ -94,13 +95,21 @@ h1 {
   font-size: 92px;
   margin: 0;
 }
+@media(max-width: 600px) {
+  .hero-text {
+    padding: var(--gap-tiny);
+  }
+  h1 {
+    font-size: 64px;
+  }
+}
 .hero-text > * + * {
   margin: 20px 0 0;
 }
 
 .colors {
-  height: 240px;
-  width: 600px;
+  max-height: 240px;
+  max-width: 600px;
   margin-bottom: -90px;
 }
 
@@ -114,6 +123,11 @@ h1 {
   left: 340px;
   max-width: 504px;
   /*height: 378px;*/
+}
+@media(max-width: 900px) {
+  .sunset {
+    display: none;
+  }
 }
 
 
@@ -136,6 +150,11 @@ h1 {
   width: 360px;
   height: 40px;
 }
+@media(max-width: 360px) {
+  .title-bg {
+    width: 100vw;
+  }
+}
 h2 {
   display: inline;
   position: relative;
@@ -154,16 +173,26 @@ h2 {
 .stuff > *:nth-child(even) {
   align-self: flex-end;
 }
+@media(max-width: 600px) {
+  .stuff > *, .stuff > *:nth-child(even) {
+    align-self: stretch;
+  }
+}
 .project {
   display: flex;
   flex-flow: column;
   cursor: pointer;
   max-width: 600px;
 }
-.project > img {
+.project-image {
+
+}
+.project img {
   position: relative;
   height: 250px;
   object-fit: cover;
+  flex: 1 1 0;
+  min-width: 0;
 }
 .project:hover > img {
   opacity: 0.5;
@@ -186,15 +215,30 @@ h2 {
   line-height: var(--line-height-paragraph);
 }
 
+.small-projects {
+  display: grid;
+  gap: var(--gap-small);
+  grid-template-columns: repeat(auto-fill, 300px);
+  max-width: 660px;
+}
+/*
 .small-projects > * {
   max-width: 300px;
 }
-.small-projects > * + * {
-  margin-left: var(--gap-small);
+*/
+@media(max-width: 660px) {
+  .small-projects {
+    grid-template-columns: 1fr;
+  }
 }
 
 .work-text {
   display: block;
+}
+@media(max-width: 600px) {
+  .work-text {
+    padding: 0 var(--gap-tiny);
+  }
 }
 .work-text > * {
   margin-top: 1em;
