@@ -7,7 +7,6 @@
 
   <body>
     <main>
-      <content>
         <section class="hero">
           <img class="colors" src="colors.svg" />
 
@@ -15,39 +14,115 @@
             <h1>Kyle Warren</h1>
             <p>i write and design software that often involves <strong>complex UI</strong>, <strong>rich graphics</strong>, and <strong>live networking</strong>.</p>
             <p>my work history includes <strong>video games</strong>, <strong>social networks</strong>, <strong>analytics</strong>, and <strong>enterprise software</strong>. you can read more about it <a>here</a>.</p>
-            <p>sometimes i make <a>weird website things</a>.
-              i write things on <a>my blog</a>.
-              i compose and record <a>music</a>.
-              i <a>run</a> a lot.
-              i have a <a>bossy dog</a>.
-              i take <a>photos</a>.</p>
+            <p>sometimes i make <a href="#projects">weird website things</a>.
+              i write things on <a href="https://kylejwarren.com/blog">my blog</a>.
+              i compose and record <a href="https://raveghost.bandcamp.com">music</a>.
+              i <a href="https://www.strava.com/athletes/1094725">run</a> a lot.
+              i have a <a href="https://www.instagram.com/partyplimp/">bossy dog</a>.
+              i take <a href="https://www.instagram.com/malectro/">photos</a>.</p>
           </div>
 
           <img class="sunset" srcset="sunset.jpg 1x, sunset@2x.jpg 2x" />
         </section>
 
-        <section class="projects">
+        <section id="projects" class="section projects">
           <span class="title">
             <div class="title-bg"></div>
             <h2>Projects</h2>
           </span>
 
           <div class="stuff">
-            <a class="project">
-              <img srcset="projects/soundquake.jpg 1x, projects/soundquake@2x.jpg 2x" />
+            <a class="project" href="https://kylejwarren.com/30-days-30-songs/">
+              <img srcset="projects/30days30songs.png 1x, projects/30days30songs@2x.png 2x" />
               <div class="text">
-              <span class="title">30 Days, 30 Songs</span>
-              <span class="description">a collaboration with various musicians for the 2016 election</span>
+                <span class="title">30 Days, 30 Songs</span>
+                <span class="description">a collaboration with various musicians for the 2016 election. preserved on my server.</span>
               </div>
             </a>
 
-            <a class="project">
+            <a class="project" href="http://soundquake.d-bow.com/">
               <img srcset="projects/soundquake.jpg 1x, projects/soundquake@2x.jpg 2x" />
               <div class="text">
-              <span class="title">30 Days, 30 Songs</span>
-              <span class="description">a collaboration with various musicians for the 2016 election</span>
+                <span class="title">soundQuake</span>
+                <span class="description">earthquake data visualizer, requires web audio + webgl, winner of The Creators Project ArtHackSF</span>
               </div>
             </a>
+
+            <a class="project" href="http://shots.lossur.es/#/0001">
+              <img srcset="projects/lossures.jpg 1x, projects/lossures@2x.jpg 2x" />
+              <div class="text">
+                <span class="title">Living Los Sures</span>
+                <span class="description">annotated documentary film about a New York neighborhood</span>
+              </div>
+            </a>
+
+
+            <div class="small-projects">
+              <a class="project" href="http://kanyezone.com">
+                <img srcset="projects/kanyezone.jpg 1x, projects/kanyezone@2x.jpg 2x" />
+                <div class="text">
+                  <span class="title">Kanye Zone</span>
+                  <span class="description">an interactive web experience</span>
+                </div>
+              </a>
+
+              <a class="project" href="http://pitbullparty.com">
+                <img srcset="projects/pitbullparty.jpg 1x, projects/pitbullparty@2x.jpg 2x" />
+                <div class="text">
+                  <span class="title">Pitbull Party</span>
+                  <span class="description">another interactive web experience</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section work">
+          <span class="title">
+            <div class="title-bg"></div>
+            <h2>Work</h2>
+          </span>
+
+          <div class="work-text">
+            <div class="company">
+              <div>
+                <a class="company-name" href="https://sensehq.com">Sense</a>
+                <span>2015-2021</span>
+              </div>
+              <div>Head of UI Development</div>
+            </div>
+
+            <div class="company">
+              <div>
+                <span class="company-name">Obscura Digital</span>
+                <span>2015-2016</span>
+              </div>
+              <div>Contractor, WebGL + UX</div>
+            </div>
+
+            <div class="company">
+              <div>
+                <a class="company-name" href="https://mixpanel.com">Mixpanel</a>
+                <span>2013-2015</span>
+              </div>
+              <div>Product Developer</div>
+            </div>
+
+            <div class="company">
+              <div>
+                <a class="company-name" href="https://timehop.com">Timehop</a>
+                <span>2012</span>
+              </div>
+              <div>Software Developer</div>
+            </div>
+
+            <div class="company">
+              <div>
+                <a class="company-name" href="https://zynga.com">Zynga</a>
+                <span>2009-2012</span>
+              </div>
+              <div>Software Developer</div>
+            </div>
           </div>
         </section>
 
@@ -103,7 +178,6 @@
           </indent>
         </p>
         -->
-      </content>
     </main>
   </body>
 </html>
