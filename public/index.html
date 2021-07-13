@@ -12,9 +12,9 @@
 
           <div class="hero-text">
             <h1>Kyle Warren</h1>
-            <p>i write and design software that often involves <strong>complex UI</strong>, <strong>rich graphics</strong>, and <strong>live networking</strong>.</p>
-            <p>my work history includes <strong>video games</strong>, <strong>social networks</strong>, <strong>analytics</strong>, and <strong>enterprise software</strong>. you can read more about it <a>here</a>.</p>
-            <p>sometimes i make <a href="#projects">weird website things</a>.
+            <p>i write and design <a href="#projects">software</a> that often involves <strong>complex UI</strong>, <strong>rich graphics</strong>, and <strong>live networking</strong>.</p>
+            <p>my <a href="#work">work history</a> includes <strong>video games</strong>, <strong>social networks</strong>, <strong>analytics</strong>, and <strong>enterprise software</strong>. you can read more about it <a>here</a>.</p>
+            <p class="hero-text-list">sometimes i make <a href="#toys">weird website things</a>.
               i write things on <a href="https://kylejwarren.com/blog">my blog</a>.
               i compose and record <a href="https://raveghost.bandcamp.com">music</a>.
               i <a href="https://www.strava.com/athletes/1094725">run</a> a lot.
@@ -77,7 +77,48 @@
           </div>
         </section>
 
-        <section class="section work">
+        <section id="toys" class="section projects">
+          <span class="title">
+            <div class="title-bg"></div>
+            <h2>Toys</h2>
+          </span>
+
+          <div class="stuff">
+            <a class="project" href="/crumbler">
+              <img src="projects/crumbler.png" />
+              <div class="text">
+                <span class="title">Crumbler</span>
+                <span class="description">a 3d pressure sensitive synth</span>
+              </div>
+            </a>
+
+            <a class="project" href="/cube">
+              <img src="projects/cube.png" />
+              <div class="text">
+                <span class="title">Oscicube</span>
+                <span class="description">Spin that cube.</span>
+              </div>
+            </a>
+
+            <a class="project" href="/sound">
+              <img src="projects/sequence.png" />
+              <div class="text">
+                <span class="title">Sequence</span>
+                <span class="description">a sound sequencer</span>
+              </div>
+            </a>
+
+            <a class="project" href="/mixing-pool">
+              <img src="projects/ripple.png" />
+              <div class="text">
+                <span class="title">Mixing Pool</span>
+                <span class="description">a fun thing to click</span>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section id="work" class="section work">
           <span class="title">
             <div class="title-bg"></div>
             <h2>Work</h2>
@@ -126,58 +167,12 @@
           </div>
         </section>
 
-        <!--
-        <h1>Kyle Warren</h1>
-        <subtitle>software guy in SF near the Panhandle</subtitle>
-        <subtitle>into pizza, timbre, running, climbing, and reading</subtitle>
-        <p>github: <a href="http://github.com/malectro">malectro</a>, twitter: <a href="http://twitter.com/malectro">@malectro</a>, soundcloud: <a href="http://soundcloud.com/malectro">malectro</a>, linkedin: <a href="http://www.linkedin.com/in/kylewarren">kylewarren</a>, resume: <a href="/resume.pdf">resume.pdf</a>, blog: <a href="http://kylejwarren.com/blog">blog</a>, or instagram: <a href="http://instagram.com/malectro">malectro</a>.
-
-        <h2>Projects</h2>
-        <p>
-          <a href="http://toycast.kylejwarren.com">Toycast</a> <span class="k-ui-comment">// a podcast-like feed for little pieces of software</span><br />
-          <a href="http://www.30days30songs.com">30 Days, 30 Songs</a> <span class="k-ui-comment">// a scalable CMS for the 2016 election</span><br />
-          <a href="http://soundquake.d-bow.com">soundQuake</a> <span class="k-ui-comment">// earthquake data visualizer, requires web audio + webgl, winner of The Creators Project ArtHackSF</span><br />
-          <a href="http://shots.lossur.es/#/0001">Living Los Sures</a> <span class="k-ui-comment">// annotated documentary film in html5 for chrome. (click pause when the blue appears.)</span><br />
-        </p>
-
-        <h2>Contributer to</h2>
-        <p>
-          <a href="http://kanyezone.com">Kanye Zone</a> <span class="k-ui-comment">// interactive web experience</span><br />
-          <a href="http://pitbullparty.com">Pitbull Party</a> <span class="k-ui-comment">// another IWE</span><br />
-          <a href="https://sensehq.com">Sense</a> <span class="k-ui-comment">// enterprise software</span><br />
-          <a href="https://mixpanel.com">Mixpanel</a> <span class="k-ui-comment">// analytics software</span><br />
-          <a href="https://timehop.com">Timehop</a> <span class="k-ui-comment">// social app</span><br />
-          <a href="https://apps.facebook.com/wordswithfriends">Words with Friends</a> <span class="k-ui-comment">// social game</span><br />
-        </p>
-
-        <h2>Audio/Visual Toys</h2>
-        <p>
-          <a href="/crumbler">crumbler</a> <span class="k-ui-comment">// saw wave manipulator</span><br />
-          <a href="/sound">sound</a> <span class="k-ui-comment">// synthetic sequencer</span><br />
-          <a href="/mixing-pool">mixing pool</a> <span class="k-ui-comment">// webgl meditation pool</span><br />
-          <a href="/raveghost">raveghost</a> <span class="k-ui-comment">// dancing ghost (in canvas)</span><br />
-          <a href="/stars">stars</a> <span class="k-ui-comment">// some stars</span><br />
-        </p>
-
-        <h2>Audio</h2>
-        <p>
-          <a href="https://soundcloud.com/malectro/whales">Whales</a> <span class="k-ui-comment">// result of a synthesizer purchase</span><br>
-          <a href="https://soundcloud.com/malectro/slowheart">Slowheart</a> <span class="k-ui-comment">// one-take guitar song</span><br>
-          <a href="https://soundcloud.com/malectro/sunspots">Sunspots</a> <span class="k-ui-comment">// self-recorded song</span><br>
-          <a href="https://kylejwarren.com/audio/Surf%20Air.mp3">Surf Air</a> <span class="k-ui-comment">// self-recorded song (with drums!)</span><br>
-          <a href="https://kylejwarren.com/audio/Perfect%20Fifths.mp3">Perfect Fifths</a> <span class="k-ui-comment">// a bedroom-recorded song</span><br>
-        </p>
-
-        <h2>Transcriptions "because somebody had to do it!"</h2>
-        <p>
-          <indent>
-            M83 - <a href="sheets/tooLate.pdf">"Too Late"</a><br />
-            Four Tet - <a href="sheets/unspoken.png">"Unspoken"</a><br />
-            Owen Pallet - <a href="sheets/exLover.pdf">"Your Ex-Lover is Dead"</a><br />
-            Fleet Foxes - <a href="sheets/oliverJames.rtf">"Oliver James"</a>
-          </indent>
-        </p>
-        -->
+        <a class="back-to-top" href="#">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.70711 0.292892C8.31658 -0.097632 7.68342 -0.097632 7.29289 0.292892L0.928933 6.65685C0.538408 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292892ZM9 16L9 0.999999L7 0.999999L7 16L9 16Z" fill="#626262"/>
+          </svg>
+          back to top?
+        </a>
     </main>
   </body>
 </html>

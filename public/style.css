@@ -27,6 +27,7 @@
   --color-gray-5: #222222;
 
   --font-family-title: Futura, sans-serif;
+  --line-height-paragraph: 1.25;
 
   --gap-small: 60px;
 }
@@ -36,6 +37,8 @@ body, html {
   padding: 0;
 
   background: var(--color-bg);
+  font-family: Georgia, serif;
+  font-size: 18px;
 }
 
 main {
@@ -43,6 +46,7 @@ main {
   margin: 0 auto;
   max-width: 900px;
   flex-flow: column;
+  padding-bottom: 10vh;
 }
 main section, main div {
   display: inherit;
@@ -51,7 +55,7 @@ main section, main div {
 p {
   white-space: pre-line;
   margin: 0;
-  font-size: 18px;
+  line-height: var(--line-height-paragraph);
 }
 
 a {
@@ -98,6 +102,10 @@ h1 {
   height: 240px;
   width: 600px;
   margin-bottom: -90px;
+}
+
+.hero-text-list {
+  max-width: 310px;
 }
 
 .sunset {
@@ -174,6 +182,10 @@ h2 {
   color: var(--color-orange-dark);
 }
 
+.project .description {
+  line-height: var(--line-height-paragraph);
+}
+
 .small-projects > * {
   max-width: 300px;
 }
@@ -189,4 +201,16 @@ h2 {
 }
 .company-name {
   font-weight: bold;
+}
+
+.back-to-top {
+  align-self: center;
+  --color: var(--color-gray-3);
+  color: var(--color);
+}
+.back-to-top svg path {
+  fill: var(--color);
+}
+.back-to-top:hover {
+  --color: var(--color-purple-dark);
 }
