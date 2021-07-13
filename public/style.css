@@ -124,9 +124,43 @@ h1 {
   max-width: 504px;
   /*height: 378px;*/
 }
+.title-sunset {
+  display: none;
+}
 @media(max-width: 900px) {
+  h1 {
+    position: relative;
+  }
+  .title-sunset {
+    display: block;
+    position: absolute;
+    top: 36px;
+    left: 70px;
+    width: 40vw;
+    height: 30vw;
+    overflow: hidden;
+  }
+  .title-sunset img {
+    position: static;
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+  }
+  .title-sunset span {
+    position: absolute;
+    top: -36px;
+    left: -70px;
+    color: var(--color-bg);
+    mix-blend-mode: luminosity;
+  }
   .sunset {
-    display: none;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 40vw;
+  }
+  .sunset::before {
+    content: 'Kyle Warren';
   }
 }
 
