@@ -31,6 +31,9 @@
 
   --gap-small: 60px;
   --gap-tiny: 30px;
+  /* 300px * 2 + gap-small */
+  --width-two-columns: 660px;
+  --width-page-max: 900px;
 }
 
 body, html {
@@ -45,7 +48,7 @@ body, html {
 main {
   display: flex;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: var(--width-page-max);
   flex-flow: column;
   padding-bottom: 10vh;
 }
@@ -90,6 +93,7 @@ h1, h2 {
 .hero-text {
   flex-flow: column;
   max-width: 520px;
+  padding: 0 var(--gap-tiny);
 }
 h1 {
   font-size: 92px;
@@ -128,39 +132,8 @@ h1 {
   display: none;
 }
 @media(max-width: 900px) {
-  h1 {
-    position: relative;
-  }
-  .title-sunset {
-    display: block;
-    position: absolute;
-    top: 36px;
-    left: 70px;
-    width: 40vw;
-    height: 30vw;
-    overflow: hidden;
-  }
-  .title-sunset img {
-    position: static;
-    width: inherit;
-    height: inherit;
-    object-fit: cover;
-  }
-  .title-sunset span {
-    position: absolute;
-    top: -36px;
-    left: -70px;
-    color: var(--color-bg);
-    mix-blend-mode: luminosity;
-  }
   .sunset {
-    position: absolute;
-    left: 0;
-    top: 80px;
-    width: 40vw;
-  }
-  .sunset::before {
-    content: 'Kyle Warren';
+    display: none;
   }
 }
 
@@ -269,7 +242,7 @@ h2 {
 .work-text {
   display: block;
 }
-@media(max-width: 600px) {
+@media(max-width: 900px) {
   .work-text {
     padding: 0 var(--gap-tiny);
   }
