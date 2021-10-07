@@ -254,9 +254,18 @@ h2 {
   font-weight: bold;
 }
 
-.back-to-top {
-  align-self: center;
+.footer {
   --color: var(--color-gray-3);
+  flex-flow: column;
+  align-items: center;
+  color: var(--color);
+}
+
+.footer > * + * {
+  margin-top: 1em;
+}
+
+.back-to-top {
   color: var(--color);
 }
 .back-to-top svg path {
