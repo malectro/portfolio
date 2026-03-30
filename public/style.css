@@ -26,13 +26,23 @@
   --color-gray-4: #3F3F3F;
   --color-gray-5: #222222;
 
+  --color-text-primary: var(--color-gray-5);
+  --color-text-secondary: var(--color-gray-3);
+  --color-accent: var(--color-purple-dark);
+  --color-accent-hover: var(--color-purple-light);
+
   --font-family-title: Futura, sans-serif;
   --line-height-paragraph: 1.25;
 
-  --gap-small: 60px;
-  --gap-tiny: 30px;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-4: 1rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
   /* 300px * 2 + gap-small */
-  --width-two-columns: 660px;
+  --width-two-columns: calc(300px * 2 + var(--space-8));
   --width-page-max: 900px;
 }
 
@@ -41,18 +51,17 @@ body, html {
   padding: 0;
 
   background: var(--color-bg);
-  color: var(--color-gray-5);
+  color: var(--color-text-primary);
   font-family: Georgia, serif;
-  font-size: 18px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: #1c1c1c;
-    --color-orange-dark: var(--color-orange-light);
-    --color-purple-dark: var(--color-purple-light);
-    --color-gray-3: var(--color-gray-2);
-    --color-gray-5: #e0e0e0;
+    --color-text-primary: var(--color-gray-1);
+    --color-text-secondary: var(--color-gray-2);
+    --color-accent: var(--color-purple-light);
+    --color-accent-hover: var(--color-purple-dark);
   }
 }
 
@@ -62,6 +71,10 @@ main {
   max-width: var(--width-page-max);
   flex-flow: column;
   padding-bottom: 10vh;
+
+  @media(max-width: 600px) {
+    padding-bottom: var(--space-8);
+  }
 }
 main section, main div {
   display: inherit;
@@ -79,17 +92,20 @@ a {
   color: inherit;
 }
 p a {
-  color: var(--color-purple-dark);
+  color: var(--color-accent);
   font-weight: bold;
 }
 p a:hover {
   text-decoration: underline;
 }
 
+h1 {
+  font-family: var(--font-family-title);
+}
+
 h1, h2 {
   margin: 0;
-  font-family: var(--font-family-title);
-  font-weight: 70;
+  font-weight: 500;
 }
 
 
@@ -104,7 +120,7 @@ h1, h2 {
 .hero-text {
   flex-flow: column;
   max-width: 520px;
-  padding: 0 var(--gap-tiny);
+  padding: 0 var(--space-4);
 }
 h1 {
   font-size: 128px;
@@ -113,7 +129,8 @@ h1 {
 }
 @media(max-width: 600px) {
   .hero-text {
-    padding: var(--gap-tiny);
+    padding: var(--space-4);
+    padding-top: var(--space-8);
   }
   h1 {
     font-size: 64px;
@@ -164,16 +181,24 @@ h1 {
 h2 {
   display: inline;
   position: relative;
-  font-size: 46px;
-  padding: 0 10px;
+  font-size: 24px;
   background: var(--color-bg);
+
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+
+  @media(max-width: 660px) {
+    padding: 0 10px;
+  }
 }
 
 .stuff {
   flex-flow: column;
+  padding-top: var(--space-4);
+  gap: var(--space-8);
 }
 .stuff > * {
-  margin-top: var(--gap-small);
   align-self: flex-start;
 }
 .stuff > *:nth-child(even) {
@@ -190,29 +215,40 @@ h2 {
   cursor: pointer;
   max-width: 600px;
 }
-.project-image {
-
-}
 .project img {
   position: relative;
   height: 250px;
   object-fit: cover;
-  flex: 1 1 0;
+  flex: 0 0 auto;
   min-width: 0;
 }
-.project:hover > img {
-  opacity: 0.5;
+.project {
+  @media(max-width: 600px) {
+    padding: 0 var(--space-2);
+
+    > .text  {
+      padding: var(--space-2) 0;
+    }
+  }
+}
+.project:hover {
+  > img {
+    mix-blend-mode: plus-lighter;
+  }
+  .title {
+    text-decoration: underline;
+  }
 }
 .project > .text {
   position: relative;
-  padding: 8px 10px;
+  padding: var(--space-2) 10px;
   flex-flow: column;
 }
 .project .title {
   font-family: var(--font-family-title);
   font-size: 36px;
   font-weight: bold;
-  color: var(--color-purple-dark);
+  color: var(--color-accent);
 }
 
 .project .description {
@@ -221,7 +257,7 @@ h2 {
 
 .small-projects {
   display: grid;
-  gap: var(--gap-small);
+  gap: var(--space-8);
   grid-template-columns: repeat(auto-fill, 300px);
   max-width: 660px;
 }
@@ -241,7 +277,7 @@ h2 {
 }
 @media(max-width: 900px) {
   .work-text {
-    padding: 0 var(--gap-tiny);
+    padding: 0 var(--space-4);
   }
 }
 .work-text > * {
@@ -252,14 +288,21 @@ h2 {
 }
 
 .footer {
-  --color: var(--color-gray-3);
+  --color: var(--color-text-secondary);
+  font-size: 0.75rem;
   flex-flow: column;
   align-items: center;
   color: var(--color);
-}
+  gap: var(--space-4);
 
-.footer > * + * {
-  margin-top: 1em;
+  @media(max-width: 600px) {
+    padding: 0 var(--space-4);
+  }
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
 }
 
 .back-to-top {
@@ -269,5 +312,5 @@ h2 {
   fill: var(--color);
 }
 .back-to-top:hover {
-  --color: var(--color-purple-dark);
+  --color: var(--color-accent);
 }
