@@ -41,8 +41,19 @@ body, html {
   padding: 0;
 
   background: var(--color-bg);
+  color: var(--color-gray-5);
   font-family: Georgia, serif;
   font-size: 18px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #1c1c1c;
+    --color-orange-dark: var(--color-orange-light);
+    --color-purple-dark: var(--color-purple-light);
+    --color-gray-3: var(--color-gray-2);
+    --color-gray-5: #e0e0e0;
+  }
 }
 
 main {
@@ -96,7 +107,8 @@ h1, h2 {
   padding: 0 var(--gap-tiny);
 }
 h1 {
-  font-size: 92px;
+  font-size: 128px;
+  font-weight: 700;
   margin: 0;
 }
 @media(max-width: 600px) {
@@ -149,19 +161,6 @@ h1 {
 .title {
   position: relative;
 }
-.title-bg {
-  position: absolute;
-  top: -10px;
-  background: url(colors-light.svg);
-  background-size: cover;
-  width: 360px;
-  height: 40px;
-}
-@media(max-width: 360px) {
-  .title-bg {
-    width: 100vw;
-  }
-}
 h2 {
   display: inline;
   position: relative;
@@ -206,16 +205,14 @@ h2 {
 }
 .project > .text {
   position: relative;
-  background: var(--color-bg);
   padding: 8px 10px;
   flex-flow: column;
-  margin: -40px 0 0 40px;
 }
 .project .title {
   font-family: var(--font-family-title);
   font-size: 36px;
   font-weight: bold;
-  color: var(--color-orange-dark);
+  color: var(--color-purple-dark);
 }
 
 .project .description {
