@@ -56,6 +56,20 @@ body, html {
   font-family: Georgia, serif;
 }
 
+#ripple-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: #1c1c1c;
@@ -67,6 +81,8 @@ body, html {
 }
 
 main {
+  position: relative;
+  z-index: 1;
   display: flex;
   margin: 0 auto;
   max-width: var(--width-page-max);
@@ -123,6 +139,7 @@ h1, h2 {
   flex-flow: column;
   max-width: 520px;
   padding: 0 var(--space-4);
+  mix-blend-mode: exclusion;
 }
 h1 {
   font-size: 128px;
