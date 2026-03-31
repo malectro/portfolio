@@ -78,6 +78,9 @@ body, html {
     --color-accent: var(--color-purple-light);
     --color-accent-hover: var(--color-purple-dark);
   }
+  .hero-text {
+    mix-blend-mode: exclusion;
+  }
 }
 
 main {
@@ -138,7 +141,6 @@ h1, h2 {
   flex-flow: column;
   max-width: 520px;
   padding: 0 var(--space-4);
-  mix-blend-mode: exclusion;
 }
 h1 {
   font-size: 128px;

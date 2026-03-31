@@ -77,10 +77,15 @@ const FRAG = `#version 300 es
     vec3 bgDark  = vec3(0.110, 0.110, 0.110); // #1c1c1c
 
     // Light mode: subtle purple/gold/rose washes
-    vec3 lightA = vec3(0.898, 0.694, 0.753); // rose-light
-    vec3 lightB = vec3(0.690, 0.631, 0.784); // opal-light
+    //vec3 lightA = vec3(0.898, 0.694, 0.753); // rose-light
+    //vec3 lightA = vec3(0.690, 0.631, 0.784); // opal-light
+    //vec3 lightB = vec3(0.957, 0.694, 1.0); // purple-light
     //vec3 lightC = vec3(1.000, 0.808, 0.447); // gold-light
-    vec3 lightC = vec3(1.000, 0.639, 0.447); // orange-light
+    //vec3 lightC = vec3(1.000, 0.639, 0.447); // orange-light
+
+    vec3 lightA = vec3(0.412, 0.357, 0.537); // opal-dark
+    vec3 lightB = vec3(1.0, 0.404, 0.290); // orange-dark
+    vec3 lightC = vec3(0.671, 0.298, 0.733); // purple-dark
 
     // Dark mode: muted purple/blue tones
     vec3 darkA = vec3(0.412, 0.357, 0.537); // opal-dark
