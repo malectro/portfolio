@@ -3,29 +3,29 @@
  * global styles
  */
 :root {
-  --color-bg: #ededed;
-  --color-rose-light: #E5B1C0;
-  --color-rose-dark: #B68392;
-  --color-gold-light: #FFCE72;
-  --color-gold-dark: #F2BA63;
-  --color-opal-light: #B0A1C8;
-  --color-opal-dark: #685B89;
-  --color-orange-light: #FFA372;
-  --color-orange-dark: #E1674A;
-  --color-red-light: #FF7272;
-  --color-red-dark: #C85151;
-  --color-green-light: #93E89B;
-  --color-green-dark: #65B26D;
-  --color-blue-light: #72F7FF;
-  --color-blue-dark: #27C1C1;
-  --color-purple-light: #F4B1FF;
-  --color-purple-dark: #ab4cbb;
-  --color-gray-1: #E7E7E7;
-  --color-gray-2: #BABABA;
-  --color-gray-3: #5B5B5B;
-  --color-gray-4: #3F3F3F;
-  --color-gray-5: #222222;
-  --color-gray-6: #0a0a0a;
+  --color-bg: rgb(237 237 237);
+  --color-rose-light: rgb(229 177 192);
+  --color-rose-dark: rgb(182 131 146);
+  --color-gold-light: rgb(255 206 114);
+  --color-gold-dark: rgb(242 186 99);
+  --color-opal-light: rgb(176 161 200);
+  --color-opal-dark: rgb(104 91 137);
+  --color-orange-light: rgb(255 163 114);
+  --color-orange-dark: rgb(225 103 74);
+  --color-red-light: rgb(255 114 114);
+  --color-red-dark: rgb(200 81 81);
+  --color-green-light: rgb(147 232 155);
+  --color-green-dark: rgb(101 178 109);
+  --color-blue-light: rgb(114 247 255);
+  --color-blue-dark: rgb(39 193 193);
+  --color-purple-light: rgb(244 177 255);
+  --color-purple-dark: rgb(171 76 187);
+  --color-gray-1: rgb(231 231 231);
+  --color-gray-2: rgb(186 186 186);
+  --color-gray-3: rgb(91 91 91);
+  --color-gray-4: rgb(63 63 63);
+  --color-gray-5: rgb(34 34 34);
+  --color-gray-6: rgb(10 10 10);
 
   --color-text-primary: var(--color-gray-5);
   --color-text-secondary: var(--color-gray-3);
@@ -72,7 +72,7 @@ body, html {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #1c1c1c;
+    --color-bg: rgb(28 28 28);
     --color-text-primary: white;
     --color-text-secondary: var(--color-gray-2);
     --color-accent: var(--color-purple-light);
