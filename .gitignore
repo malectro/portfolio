@@ -1,4 +1,6 @@
 public
+!public/projects
+!public/scripts
 !public/index.html
 !public/rabbits.jpg
 !public/favicon.svg
