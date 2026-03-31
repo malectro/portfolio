@@ -172,7 +172,7 @@ function setupGeometry(gl, program) {
   gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 0, 0);
 }
 
-export function initRipple() {
+function initRipple() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   const canvas = document.createElement('canvas');
@@ -271,3 +271,5 @@ export function initRipple() {
 
   requestAnimationFrame(frame);
 }
+
+initRipple();
