@@ -207,6 +207,7 @@ h2 {
   font-size: 1rem;
   font-style: italic;
   padding: 0 var(--space-4);
+  color: var(--color-text-secondary);
 }
 
 .stuff {
@@ -249,7 +250,7 @@ h2 {
 .project {
   > .text {
     position: relative;
-    padding: var(--space-2);
+    padding: var(--space-2) 0;
     flex-flow: column;
   }
 
@@ -303,11 +304,7 @@ h2 {
 
 .work-text {
   display: block;
-}
-@media(max-width: 900px) {
-  .work-text {
-    padding: 0 var(--space-4);
-  }
+  padding: 0 var(--space-4);
 }
 .work-text > * {
   margin-top: 1em;
