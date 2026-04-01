@@ -45,6 +45,7 @@
   /* 300px * 2 + gap-small */
   --width-two-columns: calc(300px * 2 + var(--space-8));
   --width-page-max: 900px;
+  --width-padded: calc(100vw - 2 * var(--space-4));
 }
 
 body, html {
@@ -203,17 +204,16 @@ h2 {
   display: inline;
   position: relative;
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.25rem;
-
-  @media(max-width: 660px) {
-    padding: 0 var(--space-4);
-  }
+  font-size: 1rem;
+  font-style: italic;
+  padding: 0 var(--space-4);
 }
 
 .stuff {
   flex-flow: column;
   padding-top: var(--space-4);
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
   gap: var(--space-8);
 }
 .stuff > * {
@@ -223,6 +223,10 @@ h2 {
   align-self: flex-end;
 }
 @media(max-width: 600px) {
+  .stuff {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .stuff > *, .stuff > *:nth-child(even) {
     align-self: stretch;
   }
@@ -231,6 +235,7 @@ h2 {
   display: flex;
   flex-flow: column;
   cursor: pointer;
+  width: var(--width-padded);
   max-width: 600px;
 }
 .project img {
@@ -280,11 +285,19 @@ h2 {
   gap: var(--space-8);
   grid-template-columns: repeat(auto-fill, 300px);
   max-width: 660px;
+
+  .project {
+    max-width: 300px;
+  }
 }
 
 @media(max-width: 660px) {
   .small-projects {
     grid-template-columns: 1fr;
+
+    .project {
+      max-width: var(--width-padded);
+    }
   }
 }
 
