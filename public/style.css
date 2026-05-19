@@ -46,6 +46,8 @@
   --width-two-columns: calc(300px * 2 + var(--space-8));
   --width-page-max: 900px;
   --width-padded: calc(100vw - 2 * var(--space-4));
+
+  --border-radius-sm: 4px;
 }
 
 body, html {
@@ -207,7 +209,7 @@ h2 {
   font-size: 1rem;
   font-style: italic;
   padding: 0 var(--space-4);
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
 }
 
 .stuff {
@@ -238,16 +240,17 @@ h2 {
   cursor: pointer;
   width: var(--width-padded);
   max-width: 600px;
-}
-.project img {
-  position: relative;
-  height: 250px;
-  width: 100%;
-  object-fit: cover;
-  flex: 0 0 auto;
-  min-width: 0;
-}
-.project {
+
+  img {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    flex: 0 0 auto;
+    min-width: 0;
+    border-radius: var(--border-radius-sm);
+  }
+
   > .text {
     position: relative;
     padding: var(--space-2) 0;
